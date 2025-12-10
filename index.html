@@ -3,106 +3,536 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Minn Minn Aung - Web Developer Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
         }
 
         header {
-            background: #222;
+            background: linear-gradient(to right, #0d6efd, #6c757d);
             color: white;
-            padding: 20px;
             text-align: center;
-            font-size: 28px;
+            padding: 60px 20px;
         }
-
-        .section {
-            padding: 25px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            margin-top: 20px;
-            border-radius: 10px;
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 15px;
         }
-
-        h2 {
-            color: #444;
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 5px;
         }
-
-        .skills span {
-            display: inline-block;
-            background: #ddd;
-            padding: 8px 15px;
-            border-radius: 20px;
-            margin: 5px;
+        header h3 {
+            font-size: 1.4rem;
+            color: #f8f9fa;
         }
-
-        .project {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-left: 4px solid #333;
-            background: #f0f0f0;
-            border-radius: 8px;
+        nav {
+            background-color: #343a40;
         }
-
+        nav a.nav-link {
+            color: #f8f9fa;
+        }
+        nav a.nav-link:hover {
+            color: #0d6efd;
+        }
+        section {
+            padding: 60px 15px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .section-title p {
+            color: #6c757d;
+        }
+        .card {
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
         footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
+            background: #343a40;
             color: white;
-            margin-top: 40px;
+            text-align: center;
+            padding: 25px 0;
+        }
+        .contact-info i {
+            color: #0d6efd;
+            margin-right: 10px;
+        }
+        /* Project popup modal */
+        .modal-header {
+            background-color: #0d6efd;
+            color: white;
+        }
+        @media(max-width:768px){
+            header h1{font-size:2rem;}
+            header h3{font-size:1rem;}
         }
     </style>
 </head>
 <body>
 
+<!-- Header -->
 <header>
-    My Portfolio
+    <img src="https://avatars.githubusercontent.com/u/243708469?s=400&u=c83fca364c0ea86fdba8f74e93039f37f1e381cf&v=4" alt="Minn Minn Aung">
+    <h1>Minn Minn Aung</h1>
+    <h3>Web Developer</h3>
+    <p>📞 09964582638 | ✉️ aungminnminn54@gmail.com | 📍 ThiRiMyaing 2nd Street, Baho Rode, Hlaing, Yangon</p>
 </header>
 
-<div class="section">
-    <h2>About Me</h2>
-    <p>Hello! I am <strong>Your Name</strong>, and I am passionate about technology, creativity, and building things online.</p>
-</div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<div class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>UI/UX</span>
-        <span>Responsive Design</span>
+<!-- Summary -->
+<section id="summary" class="bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Summary</h2>
+            <p>Professional Overview</p>
+        </div>
+        <p>Minn Minn Aung is a dedicated Web Developer with strong skills in programming, frontend and backend development, database management, and problem-solving. Experienced in multiple projects including POS System, Student Management, Cheat Sheet Community, and Acknowledge Hub for HR Management.</p>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="fw-bold">Projects</h2>
+            <p class="text-muted">Real-world projects that showcase my skills, problem-solving, and full-stack capabilities.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Project 1 - POS System -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100 p-3 border-0">
+                    <h5 class="fw-bold">POS System</h5>
+                    <p>Retail POS system designed for convenience stores with optimized billing flows.</p>
+                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 2 - Student Management -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100 p-3 border-0">
+                    <h5 class="fw-bold">Student Management System</h5>
+                    <p>End-to-end student administration for schools & training centers.</p>
+                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#project2Modal">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 3 - Cheat Sheet Community -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100 p-3 border-0">
+                    <h5 class="fw-bold">Cheat Sheet Community</h5>
+                    <p>Centralized knowledge hub for developers and learners.</p>
+                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#project3Modal">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 4 - Acknowledge Hub -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100 p-3 border-0">
+                    <h5 class="fw-bold">Acknowledge Hub***</h5>
+                    <p>Announcement & acknowledgement portal for HR with analytics.</p>
+                    <button class="btn btn-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#project4Modal">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------------- MODALS ---------------------- -->
+
+<!-- Modal 1: POS System -->
+<div class="modal fade" id="project1Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">POS System – Convenience Store</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <h6 class="fw-bold">Project Overview</h6>
+                <p>Designed and developed a full POS system for convenience stores to optimize customer checkout speed
+                    and improve inventory accuracy. System supports real-time stock updates, barcode scanning, receipt printing, and daily sales reports.</p>
+
+                <h6 class="fw-bold mt-3">Key Features</h6>
+                <ul>
+                    <li>Barcode-based product scanning</li>
+                    <li>Real-time stock management</li>
+                    <li>Daily/Monthly sales report generation</li>
+                    <li>Role-based authentication (Admin/Cashier)</li>
+                </ul>
+
+                <h6 class="fw-bold mt-3">Technologies Used</h6>
+                <p>Java, Spring Boot, MySQL, HTML/CSS/JS, Bootstrap, REST API, JSP</p>
+
+                <h6 class="fw-bold mt-3">My Responsibilities</h6>
+                <ul>
+                    <li>Developed backend API using Spring Boot</li>
+                    <li>Designed UI for cashier & admin modules</li>
+                    <li>Implemented product & inventory logic</li>
+                    <li>Integrated reporting & analytics</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="section">
-    <h2>Projects</h2>
+<!-- Modal 2: Student Management -->
+<div class="modal fade" id="project2Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Student Management System</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
 
-    <div class="project">
-        <h3>Project 1</h3>
-        <p>A description of your first project goes here.</p>
+            <div class="modal-body">
+                <h6 class="fw-bold">Project Overview</h6>
+                <p>A complete platform for managing student enrollments, attendance, exams, grades, schedules and teacher assignments.</p>
+
+                <h6 class="fw-bold mt-3">Key Features</h6>
+                <ul>
+                    <li>Student registration with photo upload</li>
+                    <li>Attendance tracking</li>
+                    <li>Exam scheduling & results entry</li>
+                    <li>Multi-role access (Admin/Teacher/Student)</li>
+                </ul>
+
+                <h6 class="fw-bold mt-3">Technologies</h6>
+                <p>Spring MVC, MySQL, JSP, Bootstrap, JavaScript</p>
+
+                <h6 class="fw-bold mt-3">My Contributions</h6>
+                <ul>
+                    <li>Built the full UI using JSP + Bootstrap</li>
+                    <li>Wrote the complete CRUD backend logic</li>
+                    <li>Created database structure for courses & results</li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <div class="project">
-        <h3>Project 2</h3>
-        <p>A description of your second project goes here.</p>
-    </div>
-
 </div>
 
-<div class="section">
-    <h2>Contact</h2>
-    <p>Email: <strong>youremail@gmail.com</strong></p>
+<!-- Modal 3: Cheat Sheet Community -->
+<div class="modal fade" id="project3Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Cheat Sheet Community</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <h6 class="fw-bold">Project Overview</h6>
+                <p>Created a centralized knowledge-sharing platform where users can browse, upload, and categorize Cheat Sheets in programming, e-learning, office tools, and more.</p>
+
+                <h6 class="fw-bold mt-3">Key Features</h6>
+                <ul>
+                    <li>Category-based cheat sheet organization</li>
+                    <li>User upload and admin approval</li>
+                    <li>Search & filter for quick access</li>
+                    <li>Responsive UI for all devices</li>
+                </ul>
+
+                <h6 class="fw-bold mt-3">Technologies</h6>
+                <p>Angular, Spring Boot, MySQL, REST API, Cloudinary (for storage)</p>
+
+                <h6 class="fw-bold mt-3">My Role</h6>
+                <ul>
+                    <li>Developed complete admin module</li>
+                    <li>Designed API endpoints for user uploads</li>
+                    <li>Integrated Cloudinary for PDF/image storage</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
+<!-- Modal 4: Acknowledge Hub -->
+<div class="modal fade" id="project4Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Acknowledge Hub – HR Announcement & Acknowledgement System</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <!-- Overview -->
+                <h6 class="fw-bold">📌 Project Overview</h6>
+                <p>
+                    A full-scale HR Announcement & Acknowledgement Management System used to digitally deliver announcements,
+                    track acknowledgments, and generate real-time reports. Designed to improve HR communication across departments
+                    through real-time integration, automation, and modern UI/UX. 
+                </p>
+
+                <!-- Award -->
+                <div class="alert alert-success mt-3">
+                    🏆 <strong>Award:</strong> This project was selected as the <strong>Winner</strong> of the OJT Batch Final Project.
+                </div>
+
+                <!-- Duration -->
+                <h6 class="fw-bold mt-3">⏳ Duration</h6>
+                <p>May 2024 – Present</p>
+
+                <!-- Technologies -->
+                <h6 class="fw-bold mt-3">🛠 Technologies Used</h6>
+                <ul>
+                    <li><strong>Backend:</strong> Java, Spring Boot, Spring Data JPA, Hibernate, Spring WebSocket</li>
+                    <li><strong>Frontend:</strong> Angular, HTML, CSS, TypeScript</li>
+                    <li><strong>Database:</strong> MySQL</li>
+                    <li><strong>API:</strong> RESTful API, JSON</li>
+                    <li><strong>Messaging:</strong> Spring WebSocket, Telegram Bot API</li>
+                    <li><strong>File Processing:</strong> Apache POI (Excel automation)</li>
+                    <li><strong>Media Storage:</strong> Cloudinary</li>
+                    <li><strong>Tools:</strong> Git, Docker, Jenkins CI/CD, AWS (optional)</li>
+                </ul>
+
+                <!-- Responsibilities -->
+                <h6 class="fw-bold mt-3">💼 My Responsibilities</h6>
+                <ul>
+                    <li>Developed the complete AcknowledgeHub system connecting HR, management, and employees.</li>
+                    <li>Implemented Excel-based bulk data upload using Apache POI with validation and error handling.</li>
+                    <li>Built real-time acknowledgment updates using Spring WebSocket for instant push notifications.</li>
+                    <li>Integrated Telegram Bot API for smart announcement delivery and quick acknowledgment responses.</li>
+                    <li>Designed clean and intuitive Angular UI for viewing announcements, acknowledgment lists, filters, and exports.</li>
+                    <li>Created secure REST APIs integrating Angular frontend with Spring Boot backend.</li>
+                    <li>Implemented Cloudinary upload service for storing announcement images and attachments.</li>
+                    <li>Optimized MySQL database operations for large-scale acknowledgment datasets.</li>
+                    <li>Developed JWT-based authentication system with role-based access control.</li>
+                    <li>Configured Jenkins CI/CD pipeline for automated testing and deployment.</li>
+                </ul>
+
+                <!-- Key Features -->
+                <h6 class="fw-bold mt-3">🚀 Key Features</h6>
+                <ul>
+                    <li>Announcement creation, scheduling, and multi-department distribution.</li>
+                    <li>Real-time WebSocket broadcasts for new announcements and acknowledgment updates.</li>
+                    <li>Excel import automation for thousands of acknowledgment records.</li>
+                    <li>Telegram Bot integration for instant updates on mobile devices.</li>
+                    <li>Export acknowledgment reports as PDF and Excel.</li>
+                    <li>HR/Admin dashboards with charts and analytics.</li>
+                    <li>Image/file handling via Cloudinary.</li>
+                </ul>
+
+                <!-- Achievements -->
+                <h6 class="fw-bold mt-3">🏆 Achievements</h6>
+                <ul>
+                    <li>Recognized as the <strong>Best Project (Winner)</strong> of the OJT Batch Final Assessment.</li>
+                    <li>Improved acknowledgment processing speed using real-time WebSocket updates.</li>
+                    <li>Boosted HR engagement with Telegram integration (Y% increase).</li>
+                    <li>Optimized Cloudinary usage leading to storage efficiency (Z% savings).</li>
+                    <li>Handled heavy Excel data loads (10,000+ rows) with zero performance drop.</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</section>
+
+<!-- Experience -->
+<section id="experience" class="bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Experience</h2>
+            <p>Professional Work History</p>
+        </div>
+        <ul>
+            <li><strong>2023-2024:</strong> ACE Inspiration</li>
+            <li><strong>2024-2025:</strong> DIR-ACE Technology in GGI WebPortal and JLPT Automation robot Selenium tool</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+    <div class="container">
+        <div class="section-title">
+            <h2>Education</h2>
+            <p>Academic Background</p>
+        </div>
+        <ul>
+            <li>Graduated from High School</li>
+            <li>Completed multiple courses in Programming (Web Development)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Skills & Strengths -->
+<section id="skills" class="bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Skills & Strengths</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Programming & Frontend</h5>
+                <p>Java, C#, HTML, CSS, SCSS, JavaScript, Angular, JSP, Bootstrap, Thymeleaf, Blazor</p>
+                <h5>Backend & Database</h5>
+                <p>Servlet, Spring MVC, Spring Boot, .NET, MySQL, MSSQL, pgSQL</p>
+                <h5>Tools & Technologies</h5>
+                <p>Git, VS Code, Visual Studio, IntelliJ, Eclipse, Tomcat, MSSQL Server, Cloudinary</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Strengths</h5>
+                <ul>
+                    <li>Hardworking & Dedicated</li>
+                    <li>Adaptable & Open to Feedback</li>
+                    <li>Self-Motivated & Proactive</li>
+                    <li>Strong Analytical & Problem-Solving Skills</li>
+                    <li>Excellent Communication & Leadership Skills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Training / Courses -->
+<section id="training">
+    <div class="container">
+        <div class="section-title">
+            <h2>Training & Courses</h2>
+        </div>
+        <ul>
+            <li>Programming Fundamental Course (Completed)</li>
+            <li>On-the-Job Training for Junior Web Developer (Completed)</li>
+            <li>Java Web Development Course (Completed)</li>
+            <li>C# Web + API Development Course (Completed)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact Me</h2>
+        </div>
+        <p class="contact-info"><i class="fas fa-phone"></i> 09964582638</p>
+        <p class="contact-info"><i class="fas fa-envelope"></i> aungminnminn54@gmail.com</p>
+        <p class="contact-info"><i class="fas fa-map-marker-alt"></i> ThiRiMyaing 2nd Street, Baho Rode, Hlaing, Yangon</p>
+    </div>
+</section>
+
+<!-- Footer -->
 <footer>
-    © 2025 My Portfolio
+    &copy; 2025 Minn Minn Aung - Web Developer Portfolio
 </footer>
+
+<!-- Project Modals -->
+<!-- Project 1 -->
+<div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="project1Label">POS System</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        POS system based on convenience stores. Features include billing, inventory management, sales reports, and user-friendly interface.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 2 -->
+<div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="project2Label">Student Management</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Student Management system for school or training center. Includes student records, attendance tracking, grading system, and reporting.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 3 -->
+<div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="project3Label">Cheat Sheet Community</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Cheat Sheet platform based on categories such as programming, e-learning, etc. Users can create, browse, and share cheat sheets.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 4 -->
+<div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="project4Label">Acknowledge Hub</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Announcement and Acknowledge Management for HR Department (2023-2025) including employee acknowledgment tracking and reporting system.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+	
