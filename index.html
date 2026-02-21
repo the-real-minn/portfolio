@@ -4,37 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minn Minn Aung - Web Developer Portfolio</title>
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Animate.css for simple animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary: #0d6efd;
-            --secondary: #6c757d;
-            --dark: #343a40;
-            --light: #f8f9fa;
-        }
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Arial', sans-serif;
             scroll-behavior: smooth;
         }
 
         header {
-            /* hero background with overlay */
-            background: linear-gradient(rgba(13,110,253,0.65), rgba(52,58,64,0.65)),
-                        url('https://source.unsplash.com/1600x900/?technology,code') center/cover no-repeat;
+            background: linear-gradient(to right, #0d6efd, #6c757d);
             color: white;
             text-align: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 20px;
+            padding: 60px 20px;
         }
         header img {
             width: 150px;
@@ -58,24 +42,10 @@
             color: #f8f9fa;
         }
         nav a.nav-link:hover {
-            color: var(--primary) !important;
-        }
-        nav a.nav-link.active {
-            color: var(--primary) !important;
-            font-weight: 600;
+            color: #0d6efd;
         }
         section {
             padding: 60px 15px;
-        }
-        /* fade-in utility */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: none;
         }
         .section-title {
             text-align: center;
@@ -115,22 +85,7 @@
         }
     </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0">
-
-<script>
-    // Intersection observer for fade-in
-    document.addEventListener('DOMContentLoaded', function(){
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {threshold: 0.1});
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    });
-</script>
+<body>
 
 <!-- Header -->
 <header>
@@ -138,13 +93,12 @@
     <h1>Minn Minn Aung</h1>
     <h3>Web Developer</h3>
     <p>📞 09964582638 | ✉️ aungminnminn54@gmail.com | 📍 ThiRiMyaing 2nd Street, Baho Road, Hlaing, Yangon</p>
-    <a href="#projects" class="btn btn-outline-light btn-lg mt-3">View My Work</a>
 </header>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#"><i class="fas fa-code me-1"></i>Portfolio</a>
+    <a class="navbar-brand" href="#">Portfolio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -162,7 +116,7 @@
 </nav>
 
 <!-- Summary -->
-<section id="summary" class="bg-light fade-in">
+<section id="summary" class="bg-light">
     <div class="container">
         <div class="section-title">
             <h2>Summary</h2>
@@ -173,7 +127,7 @@
 </section>
 
 <!-- Projects -->
-<section id="projects" class="bg-light fade-in">
+<section id="projects" class="bg-light">
     <div class="container">
         <div class="section-title">
             <h2 class="fw-bold">Projects</h2>
@@ -427,60 +381,30 @@
 </section>
 
 <!-- Experience -->
-<section id="experience" class="bg-light fade-in">
+<section id="experience" class="bg-light">
     <div class="container">
         <div class="section-title">
             <h2>Experience</h2>
             <p>Professional Work History</p>
         </div>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">ACE Inspiration</h5>
-                        <p class="card-text"><small class="text-muted">2023–2024</small></p>
-                        <p>Worked on various web development tasks, contributing to full-stack features and database design.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">DIR-ACE Technology</h5>
-                        <p class="card-text"><small class="text-muted">2024–2025</small></p>
-                        <p>Developed features for GGI WebPortal and built a JLPT automation robot using Selenium.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul>
+            <li><strong>2023-2024:</strong> ACE Inspiration</li>
+            <li><strong>2024-2025:</strong> DIR-ACE Technology in GGI WebPortal and JLPT Automation robot Selenium tool</li>
+        </ul>
     </div>
 </section>
 
 <!-- Education -->
-<section id="education" class="fade-in">
+<section id="education">
     <div class="container">
         <div class="section-title">
             <h2>Education</h2>
             <p>Academic Background</p>
         </div>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">High School Diploma</h5>
-                        <p>Graduated from High School with focus on science and IT.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Web Development Courses</h5>
-                        <p>Completed multiple programming and web development courses.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul>
+            <li>Graduated from High School</li>
+            <li>Completed multiple courses in Programming (Web Development)</li>
+        </ul>
     </div>
 </section>
 
@@ -493,23 +417,11 @@
         <div class="row">
             <div class="col-md-6">
                 <h5>Programming & Frontend</h5>
-                <p>Java, C#, HTML, CSS, SCSS, JavaScript, Angular, JSP, Bootstrap, Thymeleaf, Blazor</p>
-                <div class="mb-2">
-                    <label class="form-label small">HTML / CSS</label>
-                    <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 90%;"></div></div>
-                </div>
-                <div class="mb-2">
-                    <label class="form-label small">JavaScript / Angular</label>
-                    <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 80%;"></div></div>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label small">Java / Spring</label>
-                    <div class="progress"><div class="progress-bar bg-primary" role="progressbar" style="width: 75%;"></div></div>
-                </div>
+                <p>Java, C#, PHP, HTML, CSS, SCSS, JavaScript, Angular, JSP, Bootstrap, Thymeleaf, Blazor, Flutter, Dart</p>
                 <h5>Backend & Database</h5>
-                <p>Servlet, Spring MVC, Spring Boot, .NET, MySQL, MSSQL, pgSQL</p>
+                <p>Servlet, Spring MVC, Spring Boot, .NET, MySQL, MSSQL, pgSQL, Supabase</p>
                 <h5>Tools & Technologies</h5>
-                <p>Git, VS Code, Visual Studio, IntelliJ, Eclipse, Tomcat, MSSQL Server, Cloudinary</p>
+                <p>Git, VS Code, Visual Studio, IntelliJ, Eclipse, Tomcat, MSSQL Server, Cloudinary, Android Studio</p>
             </div>
             <div class="col-md-6">
                 <h5>Strengths</h5>
@@ -526,25 +438,17 @@
 </section>
 
 <!-- Training / Courses -->
-<section id="training" class="fade-in">
+<section id="training">
     <div class="container">
         <div class="section-title">
             <h2>Training & Courses</h2>
         </div>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <ul>
-                    <li>Programming Fundamental Course (Completed)</li>
-                    <li>On-the-Job Training for Junior Web Developer (Completed)</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul>
-                    <li>Java Web Development Course (Completed)</li>
-                    <li>C# Web + API Development Course (Completed)</li>
-                </ul>
-            </div>
-        </div>
+        <ul>
+            <li>Programming Fundamental Course (Completed)</li>
+            <li>On-the-Job Training for Junior Web Developer (Completed)</li>
+            <li>Java Web Development Course (Completed)</li>
+            <li>C# Web + API Development Course (Completed)</li>
+        </ul>
     </div>
 </section>
 
@@ -554,67 +458,80 @@
         <div class="section-title">
             <h2>Contact Me</h2>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <p class="contact-info"><i class="fas fa-phone"></i> 09964582638</p>
-                <p class="contact-info"><i class="fas fa-envelope"></i> aungminnminn54@gmail.com</p>
-                <p class="contact-info"><i class="fas fa-map-marker-alt"></i> ThiRiMyaing 2nd Street, Baho Road, Hlaing, Yangon</p>
-            </div>
-            <div class="col-md-6">
-                <form class="row g-3">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="col-12">
-                        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        <p class="contact-info"><i class="fas fa-phone"></i> 09964582638</p>
+        <p class="contact-info"><i class="fas fa-envelope"></i> aungminnminn54@gmail.com</p>
+        <p class="contact-info"><i class="fas fa-map-marker-alt"></i> ThiRiMyaing 2nd Street, Baho Rode, Hlaing, Yangon</p>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="py-4" style="background: var(--dark); color:white;">
-    <div class="container text-center">
-        <p>&copy; 2025 Minn Minn Aung - Web Developer Portfolio</p>
-        <div>
-            <a href="#" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
-            <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
-        </div>
-    </div>
+<footer>
+    &copy; 2025 Minn Minn Aung - Web Developer Portfolio
 </footer>
 
-<!-- Back to top button -->
-<a href="#" class="btn btn-primary back-to-top"><i class="fas fa-chevron-up"></i></a>
+<!-- Project Modals -->
+<!-- Project 1 -->
+<div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="project1Label">POS System</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        POS system based on convenience stores. Features include billing, inventory management, sales reports, and user-friendly interface.
+      </div>
+    </div>
+  </div>
+</div>
 
-<style>
-    .back-to-top {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        display: none;
-        z-index: 1000;
-    }
-</style>
+<!-- Project 2 -->
+<div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="project2Label">Student Management</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Student Management system for school or training center. Includes student records, attendance tracking, grading system, and reporting.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 3 -->
+<div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="project3Label">Cheat Sheet Community</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Cheat Sheet platform based on categories such as programming, e-learning, etc. Users can create, browse, and share cheat sheets.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 4 -->
+<div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="project4Label">Acknowledge Hub</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Announcement and Acknowledge Management for HR Department (2023-2025) including employee acknowledgment tracking and reporting system.
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    var btn = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) btn.style.display = 'block';
-        else btn.style.display = 'none';
-    });
-</script>
 
 </body>
 </html>
